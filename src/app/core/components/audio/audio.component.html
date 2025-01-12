@@ -1,0 +1,29 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-xl-8 col-lg-10 col-md-10">
+        <div class="h3 Lession">
+            Career Paths Information Tecnology
+        </div>
+        <div class="pt-3  ps-3">
+            <span class="label">CD</span> : <span class="label-name">{{audio?.cd}}</span>
+        </div>
+        <div class="  ps-3">
+            <span class="label">Track</span> : <span class="label-name">{{audio?.track}}</span>
+        </div>
+        <div class=" pb-4 ps-3">
+            <span class="label">Audio</span> : <span class="label-name">{{audio?.audioName}}</span>
+        </div>
+        @if(test){
+        <div class="mp3-player">
+            <audio controls>
+                <source src="../../../../assets/audios/{{audio?.audio}}" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        }@else {
+        <div class="w-100 d-flex justify-content-center">
+            <nz-spin nzSimple nzSize="large"></nz-spin>
+        </div>
+        }
+
+    </div>
+</div>
