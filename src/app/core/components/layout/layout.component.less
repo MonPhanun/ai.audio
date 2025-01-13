@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box !important;
+}
+
+.logo {
+    width: 240px;
+    font-size: 18px !important;
+    background: rgba(255, 255, 255, 0.2);
+
+    float: left;
+}
+
+.header-menu {
+    line-height: 64px;
+}
+
+.sider-menu {
+    height: 92vh;
+    border-right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.inner-layout {
+    padding: 0 24px 24px;
+}
+
+nz-breadcrumb {
+    margin: 16px 0;
+}
+
+nz-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+}
+
+nz-sider {
+    height: 92vh;
+
+}
+
+nz-header {
+    padding: 0px;
+}
+
+.ant-menu-submenu-selected {
+    color: #a89c58 !important;
+}
+
+.ant-menu-item-selected {
+    color: #a89c58 !important;
+    background-color: #a89c5813 !important;
+
+}
+
+.ant-menu-item-selected::after {
+    border-right-color: #a89c58 !important;
+}
+
+.header-two {
+    display: none !important;
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 769.98px) {
+    .sider-menu {
+        position: absolute !important;
+
+        width: 0px;
+        height: 92vh;
+        transition: all .4s ease-in-out;
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        z-index: 100;
+    }
+
+    .small-open {
+        width: 240px !important;
+    }
+
+    .header-one {
+        display: none !important;
+    }
+
+    .header-two {
+        display: block !important;
+    }
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {}

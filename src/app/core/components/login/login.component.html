@@ -1,0 +1,27 @@
+<div class="w-100 h-100  d-flex justify-content-center align-items-center">
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required [(ngModel)]="dataLogin.email"
+                        name="email">
+                    <div class="text-danger">
+                        {{errEmail}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required
+                        [(ngModel)]="dataLogin.password" name="password">
+                    <div class="text-danger">
+                        {{errPassword}}
+                    </div>
+                </div>
+                <button type="submit" class="btn mt-4" (click)="onLogin()">Login</button>
+
+            </form>
+        </div>
+    </div>
+</div>
