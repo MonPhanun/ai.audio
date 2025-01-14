@@ -24,11 +24,11 @@
                 <source src="../../../../assets/audios/{{audio?.audio}}" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
-            <div class=" d-flex justify-content-between flex-wrap">
+            <div class=" d-flex justify-content-between flex-wrap ">
                 <div class="mt-2">
-                    <button class="ms-2 mt-2" nz-button (click)="onPlay()">
+                    <button class="ms-2 mt-2 speed" nz-button (click)="onPlay()">
                         @if(!isPlay){
-                        <i class="bi bi-google-play"></i>
+                        <i class="bi bi-google-play "></i>
                         }@else {
                         <i class="bi bi-pause fw-bold fs-4 d-flex"></i>
                         }
