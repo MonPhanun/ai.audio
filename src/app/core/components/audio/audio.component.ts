@@ -20,6 +20,7 @@ export class AudioComponent {
   audio?: AudioModel;
   display = true;
   speed = 1;
+  isPlay = false;
   constructor(private aignal: SignalsService) {
     effect(() => {
       this.audio = this.aignal.signalAudiol();
@@ -41,5 +42,15 @@ export class AudioComponent {
     }
   }
 
+  onPlay() {
+    if (!this.isPlay) {
+      this.audioPlayer.nativeElement.play();
+      this.isPlay = true;
+    } else {
+      this.audioPlayer.nativeElement.pause();
+      this.isPlay = false;
+    }
+
+  }
 
 }
