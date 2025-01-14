@@ -1,27 +1,36 @@
 <nz-layout>
     <nz-header nzTheme="light">
-        <div class="logo ps-3 fw-bold ">
+        <div class="logo ps-3 fw-bold bg-white">
             <img src="../assets/image/ailogo.png" width="35" alt="" srcset="">
             <span class="ps-xl-3 ps-2">AGA INSTITUTE</span>
+
         </div>
-        <ul nz-menu nzTheme="light" nzMode="horizontal" class="header-menu header-one">
+
+        <ul nz-menu nzTheme="light" nzMode="horizontal" class="header-menu header-one d-flex">
             @if (!isCollapsed) {
             <li><i (click)="isCollapsed = !isCollapsed" class="bi bi-justify fs-3 "></i> </li>
             }
             @else {<li><i (click)="isCollapsed = !isCollapsed" class="bi bi-justify-left fs-3 "></i></li>}
 
-
+            <div class="d-flex w-100 justify-content-end">
+                <li><i (click)="onlogOut()" class="bi bi-box-arrow-right fs-3 ps-sm-0 pe-4"></i> </li>
+            </div>
         </ul>
 
         <ul nz-menu nzTheme="light" nzMode="horizontal" class="header-menu header-two">
             @if (!isSmallCollapsed) {
             <li><i (click)="isSmallCollapsed = !isSmallCollapsed" class="bi bi-justify fs-3 "></i> </li>
+
             }
             @else {<li><i (click)="this.isSmallCollapsed = !this.isSmallCollapsed" class="bi bi-justify-left fs-3 "></i>
             </li>}
-
+            <div class="d-flex w-100 justify-content-end">
+                <li><i (click)="onlogOut()" class="bi bi-box-arrow-right fs-3 ps-sm-0 pe-4"></i> </li>
+            </div>
 
         </ul>
+
+
     </nz-header>
     <nz-layout>
         <nz-sider [nzCollapsedWidth]="0" nzBreakpoint="md" nzWidth="240px" nzTheme="light" nzCollapsible

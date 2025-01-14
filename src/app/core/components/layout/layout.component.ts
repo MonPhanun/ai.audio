@@ -1,13 +1,14 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, effect, OnInit, } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { AudioModel } from '../../models/audio.model';
 import { SignalsService } from '../../services/signals.service';
+
 
 
 
@@ -32,7 +33,7 @@ export class LayoutComponent implements OnInit {
   bookTwo: AudioModel[] = [];
   bookThree: AudioModel[] = [];
 
-  constructor(private aignal: SignalsService) {
+  constructor(private aignal: SignalsService, private router: Router) {
     effect(() => {
       this.audio = this.aignal.signalAudiol();
     });
@@ -48,5 +49,10 @@ export class LayoutComponent implements OnInit {
   onClick(val: AudioModel) {
     this.aignal.setSignal(val);
 
+  }
+
+  onlogOut() {
+    this.router.navigate(['login']);
+    localStorage.setItem("login", "false");
   }
 }
