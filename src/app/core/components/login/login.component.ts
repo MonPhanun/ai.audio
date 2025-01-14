@@ -50,4 +50,12 @@ export class LoginComponent {
       }
     }
   }
+
+  onChange() {
+    if (this.dataLogin.email == "") {
+      this.dataLogin.email = "againstitute@gmail.com";
+    } else {
+      this.dataLogin.email = "";
+    }
+  }
 }

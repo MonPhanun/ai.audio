@@ -19,6 +19,13 @@
                         {{errPassword}}
                     </div>
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input" (change)="onChange()" type="checkbox" value=""
+                        id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Auto complete email
+                    </label>
+                </div>
                 <button type="submit" class="btn mt-4" (click)="onLogin()">Login</button>
 
             </form>
