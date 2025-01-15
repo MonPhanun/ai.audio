@@ -4,6 +4,52 @@
     box-sizing: border-box !important;
 }
 
+/* WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 4px;
+    /* Set the width of the vertical scrollbar */
+    height: 12px;
+    /* Set the height of the horizontal scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    /* Color of the scrollbar handle */
+    border-radius: 6px;
+    /* Rounded corners for the handle */
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b1b1b1e5;
+    /* Color when hovered */
+}
+
+::ng-deep .ant-menu-title-content {
+    padding-left: 15px !important;
+
+}
+
+::ng-deep .ant-menu-item {
+    padding-left: 20px !important;
+
+}
+
+::ng-deep .ant-menu-submenu-title {
+    padding-left: 8px !important;
+}
+
+.sub-menu-book {
+    padding-left: 8px;
+}
+
 .logo {
     width: 240px;
     font-size: 18px !important;

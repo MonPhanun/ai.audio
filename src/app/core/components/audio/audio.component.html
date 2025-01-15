@@ -24,7 +24,7 @@
                 <source src="../../../../assets/audios/{{audio?.audio}}" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
-            <div class=" d-flex justify-content-between flex-wrap ">
+            <div class=" d-flex justify-content-between  ">
                 <div class="mt-2">
                     <button class="ms-2 mt-2 speed" nz-button (click)="onPlay()">
                         @if(!isPlay){
@@ -35,8 +35,27 @@
                     </button>
                 </div>
                 <div class="mt-2 ps-2 d-flex justify-content-end flex-wrap">
-
-                    <button class="me-2 mt-2" [ngClass]="{'speed':speed==0.25}" nz-button
+                    <div class="d-flex justify-content-end flex-wrap">
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==0.25}" nz-button
+                            (click)="onSpeedChange(0.25)">0.25</button>
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==0.5}" nz-button
+                            (click)="onSpeedChange(0.5)">0.5</button>
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==0.75}" nz-button
+                            (click)="onSpeedChange(0.75)">0.75</button>
+                    </div>
+                    <div class="d-flex justify-content-end flex-wrap">
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==1}" nz-button
+                            (click)="onSpeedChange(1)">Normal</button>
+                    </div>
+                    <div class="d-flex justify-content-end flex-wrap">
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==1.25}" nz-button
+                            (click)="onSpeedChange(1.25)">1.25</button>
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==1.5}" nz-button
+                            (click)="onSpeedChange(1.5)">1.5</button>
+                        <button class="me-2 mt-2" [ngClass]="{'speed':speed==1.75}" nz-button
+                            (click)="onSpeedChange(1.75)">1.75</button>
+                    </div>
+                    <!-- <button class="me-2 mt-2" [ngClass]="{'speed':speed==0.25}" nz-button
                         (click)="onSpeedChange(0.25)">0.25</button>
                     <button class="me-2 mt-2" [ngClass]="{'speed':speed==0.5}" nz-button
                         (click)="onSpeedChange(0.5)">0.5</button>
@@ -49,9 +68,9 @@
                     <button class="me-2 mt-2" [ngClass]="{'speed':speed==1.5}" nz-button
                         (click)="onSpeedChange(1.5)">1.5</button>
                     <button class="me-2 mt-2" [ngClass]="{'speed':speed==1.75}" nz-button
-                        (click)="onSpeedChange(1.75)">1.75</button>
-                    <button class="me-2 mt-2" [ngClass]="{'speed':speed==2}" nz-button
-                        (click)="onSpeedChange(2)">2</button>
+                        (click)="onSpeedChange(1.75)">1.75</button> -->
+                    <!-- <button class="me-2 mt-2" [ngClass]="{'speed':speed==2}" nz-button
+                        (click)="onSpeedChange(2)">2</button> -->
                 </div>
             </div>
 

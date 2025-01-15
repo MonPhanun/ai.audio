@@ -38,7 +38,7 @@
 
             <ul nz-menu nzMode="inline" class="sider-menu" [ngClass]="{'small-open':isSmallCollapsed}">
                 <li nz-submenu nzTitle="ENGLISH FOR IT BOOK">
-                    <ul>
+                    <ul class="sub-menu-book">
                         <li nz-submenu nzTitle="Book 1">
                             <ul>
                                 <li nz-menu-item *ngFor="let item of bookOne; let i = index" (click)="onClick(item)"><i
